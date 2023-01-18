@@ -14,6 +14,8 @@ in include put your headers
 
 Youll also need a packages.txt where you put the CMake names of libraries you want to include
 
+Make sure there is at least one in there
+
 #-----------------------------------------------------#
 
 Now you can run main.py 
