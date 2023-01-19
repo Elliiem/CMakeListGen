@@ -26,3 +26,16 @@ and get a CMakeLists.txt file
 
 #-----------------------------------------------------#
 
+Like this
+
+/cpp/
+
+cpp/src/
+  
+cpp/include/
+  
+cpp/build/
+  
+cpp/packages.txt
+  
+
