@@ -25,16 +25,20 @@ packageString = ""
 
 for lines in Packages:
     line = lines.replace("\n","")
+    if line == "":
+        break
     CMakeList.write(f"find_package({line} REQUIRED)\n")
     CMakeList.write("include_directories(${"+line+"_INCLUDE_DIRS})\n")
     CMakeList.write("\n")
     packageString += line+" "
 
-packageString = list(packageString)
-packageString[-1] = ""
-packageString = "".join(packageString)
+if 0 < len(packageString):
+    packageString = list(packageString)
+    packageString[-1] = ""
+    packageString = "".join(packageString)
 
 CMakeList.write(f"add_executable({project} {cppString})\n")
 CMakeList.write(f"target_include_directories({project} PRIVATE include/)\n")
-CMakeList.write(f"target_link_libraries({project} {packageString})\n")
+if packageString != "":
+    CMakeList.write(f"target_link_libraries({project} {packageString})\n")
 
