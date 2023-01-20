@@ -14,8 +14,6 @@ in include put your headers
 
 Youll also need a packages.txt where you put the CMake names of libraries you want to include
 
-Make sure there is at least one in there
-
 #-----------------------------------------------------#
 
 Now you can run main.py 
@@ -26,16 +24,18 @@ and get a CMakeLists.txt file
 
 #-----------------------------------------------------#
 
-Like this
+Your File Structure should look Like this
 
 /cpp/
 
-┗ ->/src/
+┗━>/project/
+
+┗━━━>/src/
  
-┗ ->/include/
+┗━━━>/include/
   
-┗ ->/build/
+┗━━━>/build/
   
-┗ ->/packages.txt
+┗━━━>/packages.txt
   
 
