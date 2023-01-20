@@ -30,12 +30,12 @@ Like this
 
 /cpp/
 
--->/src/
+┗ ->/src/
+ 
+┗ ->/include/
   
--->/include/
+┗ ->/build/
   
--->/build/
-  
--->/packages.txt
+┗ ->/packages.txt
   
 
